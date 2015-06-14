@@ -1,0 +1,72 @@
+extends layout
+
+block content
+  nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='#') Connect Me
+    #cmLoginForm.container
+      .jumbotron
+        h2 Login Form
+        #alertMsg.alert.alert-warning
+        form#connectmeLogin.form-horizontal(role='form')
+          .form-group
+            label.control-label.col-sm-2(for='username') User Name:
+            .col-sm-10
+              input#username.form-control(type='text', placeholder='Enter User Name', required='')
+          .form-group
+            label.control-label.col-sm-2(for='pwd') Password:
+            .col-sm-10
+              input#pwd.form-control(type='password', placeholder='Enter password', required='')
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              .checkbox
+                label
+                  input(type='checkbox')
+                  |  Remember me
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button.btn.btn-default(type='submit') Submit
+    #cmApp.container
+      .jumbotron
+        h2 Welcome to Connect Me
+        h5 Click on any one of the your following interest below to start socializing
+        button.btn.btn-link.link(type='button' data-btnVal='Spirituality') Spirituality
+        button.btn.btn-link.link(type='button' data-btnVal='Technology') Technology
+        button.btn.btn-link.link(type='button' data-btnVal='Cooking') Cooking
+        button.btn.btn-link.link(type='button' data-btnVal='Finance') Finance
+        button.btn.btn-link.link(type='button' data-btnVal='Education') Education
+        button.btn.btn-link.link(type='button' data-btnVal='General') General
+   #enterUserName.container
+      .jumbotron
+        h4 Connect Me
+        form#nameForm.form-horizontal(role='form')
+          .form-group
+            label.control-label.col-sm-2(for='firstname') First Name:
+            .col-sm-10
+              input#firstname.form-control(type='text', name='firstname', placeholder='Enter User Name', required='')
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button#join.btn.btn-default(type='submit', name='join') Join
+    #chatContainer.container
+      .jumbotron
+        .peopleList
+          ul#people.list-group
+        .messagelist
+          ul#msgs.list-group
+        form#chatForm.form-horizontal(role='form')
+          .form-group
+            input#message.form-control(type='text', name='message', placeholder='Enter Message')
+          button#send.btn.btn-default(type='submit', name='send') Send
+          button#thumbsup.btn.btn-default(type='button', name='thumbsup')
+            span.glyphicon.glyphicon-thumbs-up
+  nav.navbar.navbar-inverse
+    #footerContainer.container-fluid
+      h5 Thank You TADHack Team
+    script(src='/javascripts/jquery-2.1.4.js')
+    script(src='/javascripts/underscore.js')
+    script(src='/javascripts/sdk.min.js')
+    script(src='/javascripts/app.js')
+    script(src='http://code.jquery.com/jquery-1.11.1.js')
+    script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+    script(src='/javascripts/chatapp.js')

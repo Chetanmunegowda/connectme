@@ -1,0 +1,20 @@
+.navbar {
+    text-align: center;
+}
+
+.link{
+    display: block !important;
+    color: #520000;
+}
+
+#cmApp,#enterUserName{
+    display: none;
+}
+
+#chatContainer{
+    display: none;
+}
+
+#footerContainer{
+    color: #FFFFFF;
+}

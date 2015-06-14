@@ -1,0 +1,16 @@
+body {
+  font: 14px 'Roboto', sans-serif;
+}
+
+.container{
+	background-color: rgb(64,64,64,0.6);
+	//color: #FFFFFF;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.center {
+	text-align: center;
+}
